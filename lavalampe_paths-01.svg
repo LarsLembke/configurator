@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 265 840">
+  <g id="Layer_1_Image" data-name="Layer 1 Image">
+    <image id="Layer_1_Image-2" data-name="Layer 1 Image" width="265" height="840" xlink:href="lavalampe_paths1.png"/>
+  </g>
+  <g id="path_top_bot_Image" data-name="path top bot Image">
+    <image id="path_top_bot_Image-2" data-name="path top bot Image" width="249" height="783" transform="translate(6 45)" xlink:href="lavalampe_paths2.png"/>
+  </g>
+  <g id="path_bubbles_Image" data-name="path bubbles Image">
+    <image id="path_bubbles_Image-2" data-name="path bubbles Image" width="126" height="289" transform="translate(66 260)" xlink:href="lavalampe_paths3.png"/>
+  </g>
+  <g id="path_water_Image" data-name="path water Image">
+    <image id="path_water_Image-2" data-name="path water Image" width="149" height="361" transform="translate(53 188)" xlink:href="lavalampe_paths4.png"/>
+  </g>
+</svg>

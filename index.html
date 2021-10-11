@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the lava lamp configurator!</h1>
+    </header>
+
+    <main>
+        <div id="configurator">
+            <div id="product_preview">
+                <img src="lavalampe_skygge.png" alt="" id="lava_lamp" class="basic">
+                <img src="images/furby.png" alt="" class="hide" data-feature="furby">
+                <img src="images/spongebob.png" alt="" class="hide" data-feature="spongebob">
+                <img src="" alt="" class="hide" data-feature="sirhiss">
+            </div>
+            <div id="options">
+                <figure class="option" data-feature="furby">
+                    <img src="images/furby.png" alt="">
+                    <figcaption>Long Furby</figcaption>
+                </figure>
+                <figure class="option" data-feature="spongebob">
+                    <img src="images/spongebob.png" alt="">
+                    <figcaption>Sponge Bob?</figcaption>
+                </figure>
+                <figure class="option" data-feature="sirhiss">
+                    <img src="" alt="">
+                    <figcaption>Sir Hiss</figcaption>
+                </figure>
+            </div>
+            <div id="selected">
+                <ul></ul>
+            </div>
+            <div id="color_picker">
+                <input type="color" id="color_value">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
