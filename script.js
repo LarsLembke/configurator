@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    animateLava();
+    // animateLava();
 
 
     document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
@@ -410,30 +410,34 @@ window.addEventListener("DOMContentLoaded", function() {
         lavaBall.animate(
             [{
                     transformOrigin: "top left",
-                    transform: `translateX(20px)
-            translateY(90px)`
+                    transform: `translateX(1vw)
+            translateY(1.5vw))`
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(25px) translateY(-45px)"
+                    transform: "translateX(2vw) translateY(-3vw)"
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(12px) translateY(-75px)"
+                    transform: "translateX(1vw) translateY(-5vw)"
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(5px) translateY(-45px)"
+                    transform: "translateX(1vw) translateY(-3vw)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: `translateX(20px)
-            translateY(90px)`
+                    transform: `translateX(1vw)
+            translateY(5vw)`
                 }
             ], {
                 duration: 10000,
+<<<<<<< HEAD
                 easing: "ease-in-out",
+=======
+                easing: "ease",
+>>>>>>> f51731dd0474af0188bdab9bf41f3336e290a6d8
                 direction: "alternate",
                 iterations: Infinity,
             }
@@ -441,6 +445,7 @@ window.addEventListener("DOMContentLoaded", function() {
         lavaBallShadow.animate(
             [{
                     transformOrigin: "top left",
+<<<<<<< HEAD
                     transform: `translateX(20px)
         translateY(90px)`
                 },
@@ -455,16 +460,43 @@ window.addEventListener("DOMContentLoaded", function() {
                 {
                     transformOrigin: "top left",
                     transform: "translateX(5px) translateY(-45px)"
+=======
+                    transform: `translateX(1vw)
+            translateY(1.5vw)`
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(0vw) translateY(-0.5vw)"
 
                 },
                 {
                     transformOrigin: "top left",
+                    transform: "translateX(0.5vw) translateY(-1.5vw)"
+
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(0.5vw) translateY(-0.5vw)"
+>>>>>>> f51731dd0474af0188bdab9bf41f3336e290a6d8
+
+                },
+                {
+                    transformOrigin: "top left",
+<<<<<<< HEAD
                     transform: `translateX(20px)
         translateY(90px)`
                 }
             ], {
                 duration: 10000,
                 easing: "ease-in-out",
+=======
+                    transform: `translateX(0.5vw)
+            translateY(0vw)`
+                }
+            ], {
+                duration: 10000,
+                easing: "ease",
+>>>>>>> f51731dd0474af0188bdab9bf41f3336e290a6d8
                 direction: "alternate",
                 iterations: Infinity,
             }
