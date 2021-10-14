@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    //animateLava();
+    animateLava();
 
 
     document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
@@ -242,7 +242,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
             theFeature.animate(
                 [{
-                        transformOrigin: "top left",
+                        transformOrigin: "center center",
                         position: "absolute",
                         transform: `translateX(${deltaX}px)
                 translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`
@@ -404,22 +404,71 @@ window.addEventListener("DOMContentLoaded", function() {
 
     function animateLava() {
 
-        const lavaBall = document.querySelector("#top_bubble_path");
-        const lavaBallShadow = document.querySelector()
+        const lavaBall = document.querySelector("#ball_path");
+        const lavaBallShadow = document.querySelector("#lava_ball")
 
         lavaBall.animate(
             [{
                     transformOrigin: "top left",
-                    transform: `translateX(10px)
-            translateY(20px)`
+                    transform: `translateX(20px)
+            translateY(90px)`
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "none"
+                    transform: "translateX(25px) translateY(-45px)"
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(12px) translateY(-75px)"
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(5px) translateY(-45px)"
+
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: `translateX(20px)
+            translateY(90px)`
                 }
             ], {
-                duration: 500,
-                easing: "ease-in-out"
+                duration: 100000,
+                easing: "ease",
+                direction: "alternate",
+                iterations: Infinity,
+            }
+        );
+        lavaBallShadow.animate(
+            [{
+                    transformOrigin: "top left",
+                    transform: `translateX(14px)
+            translateY(70px)`
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(20px) translateY(-35px)"
+
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(10px) translateY(-58px)"
+
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(5px) translateY(-35px)"
+
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: `translateX(14px)
+            translateY(70px)`
+                }
+            ], {
+                duration: 100000,
+                easing: "ease",
+                direction: "alternate",
+                iterations: Infinity,
             }
         );
 
