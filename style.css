@@ -80,6 +80,7 @@ h1:hover:before {
     transition: opacity ease-in .5s;
     background-color: rgb(234, 234, 247);
     justify-self: center;
+    overflow: hidden;
     
     
 }
@@ -93,6 +94,10 @@ svg {
     top: 0;
     left: 0;
     padding: 0vw 12vw 0vw 12vw;
+}
+
+#ball_path {
+    height: 90vh;
 }
 
 #product_preview img.basic {
