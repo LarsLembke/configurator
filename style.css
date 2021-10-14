@@ -28,20 +28,16 @@ h1 {
     position: relative;
     color: black;
     text-decoration: none;
-    display: inline-block; 
+    display: inline-block;
     text-shadow: 1px 1px 3px rgb(91, 91, 91);
     border: 1px solid black;
     padding: 2vw;
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
-    
-    
 }
 
 h1:hover {
     color: black;
-    
-    
 }
 
 h1:before {
@@ -55,12 +51,10 @@ h1:before {
     left: 0;
     transition: transform 0.5s ease;
     background-color: black;
-    
 }
 
 h1:hover:before {
     transform: scaleX(1);
-    
 }
 
 #configurator {
@@ -68,7 +62,6 @@ h1:hover:before {
     grid-template-areas: "product options" "features features";
     position: static;
     margin: 1vw 5vw 1vw 5vw;
-    
 }
 
 #product_preview {
@@ -81,10 +74,7 @@ h1:hover:before {
     background-color: rgb(234, 234, 247);
     justify-self: center;
     overflow: hidden;
-    
-    
 }
-
 
 #product_preview img,
 svg {
@@ -118,20 +108,17 @@ svg {
     margin-top: 0.5vw;
     font-family: 'Amatic SC';
     font-size: 1.7rem;
-
 }
 
 #color_value {
     cursor: pointer;
-    height: 4vw; 
+    height: 4vw;
     width: 5vw;
     border: 2px solid black;
     border-radius: 0.2vw;
-
 }
 
 .option {
-    
     padding: 2vw;
 }
 
@@ -140,15 +127,11 @@ figcaption {
     font-size: 1.7rem;
     margin: 3vw;
     color: black;
-
 }
 
 figcaption img {
-
     padding: 2vw;
 }
-
-
 
 #item_list {
     height: 60vh;
@@ -180,15 +163,9 @@ figcaption img {
     color: #aaa;
 }
 
-
-
 #options .option:hover {
     background-color: rgba(19, 15, 58, 0.4);
     cursor: pointer;
-   
-    
-    
-    
 }
 
 #options .option.chosen {
@@ -201,35 +178,26 @@ figcaption img {
     height: auto;
     border: 1px solid black;
     padding: 3vw;
-    
 }
 
 #selected {
     z-index: 10;
     grid-area: features;
     margin: 2vw;
-   
 }
 
 #selected ul {
-    
-   
     z-index: 10;
     list-style-type: none;
-   
-    
 }
 
 #selected ul li {
-
     margin-right: 2vw;
     z-index: 10;
     display: inline-block;
-    
 }
 
 #selected ul li img {
-   
     z-index: 11;
     width: 100%;
     height: 10vh;
@@ -237,10 +205,7 @@ figcaption img {
     box-shadow: 2px 2px 5px rgba(52, 52, 52, 0.653);
     background-color: white;
     border: 1px solid black;
-    
-    
 }
-
 
 #product_preview svg g:hover {}
 

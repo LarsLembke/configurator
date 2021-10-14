@@ -432,8 +432,8 @@ window.addEventListener("DOMContentLoaded", function() {
             translateY(90px)`
                 }
             ], {
-                duration: 100000,
-                easing: "ease",
+                duration: 10000,
+                easing: "ease-in-out",
                 direction: "alternate",
                 iterations: Infinity,
             }
@@ -441,32 +441,30 @@ window.addEventListener("DOMContentLoaded", function() {
         lavaBallShadow.animate(
             [{
                     transformOrigin: "top left",
-                    transform: `translateX(14px)
-            translateY(70px)`
+                    transform: `translateX(20px)
+        translateY(90px)`
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(20px) translateY(-35px)"
+                    transform: "translateX(25px) translateY(-45px)"
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(12px) translateY(-75px)"
+                },
+                {
+                    transformOrigin: "top left",
+                    transform: "translateX(5px) translateY(-45px)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(10px) translateY(-58px)"
-
-                },
-                {
-                    transformOrigin: "top left",
-                    transform: "translateX(5px) translateY(-35px)"
-
-                },
-                {
-                    transformOrigin: "top left",
-                    transform: `translateX(14px)
-            translateY(70px)`
+                    transform: `translateX(20px)
+        translateY(90px)`
                 }
             ], {
-                duration: 100000,
-                easing: "ease",
+                duration: 10000,
+                easing: "ease-in-out",
                 direction: "alternate",
                 iterations: Infinity,
             }
