@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    animateLava();
+    // animateLava();
 
 
     document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
@@ -410,29 +410,29 @@ window.addEventListener("DOMContentLoaded", function() {
         lavaBall.animate(
             [{
                     transformOrigin: "top left",
-                    transform: `translateX(20px)
-            translateY(90px)`
+                    transform: `translateX(1vw)
+            translateY(1.5vw))`
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(25px) translateY(-45px)"
+                    transform: "translateX(2vw) translateY(-3vw)"
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(12px) translateY(-75px)"
+                    transform: "translateX(1vw) translateY(-5vw)"
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(5px) translateY(-45px)"
+                    transform: "translateX(1vw) translateY(-3vw)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: `translateX(20px)
-            translateY(90px)`
+                    transform: `translateX(1vw)
+            translateY(5vw)`
                 }
             ], {
-                duration: 100000,
+                duration: 10000,
                 easing: "ease",
                 direction: "alternate",
                 iterations: Infinity,
@@ -441,31 +441,31 @@ window.addEventListener("DOMContentLoaded", function() {
         lavaBallShadow.animate(
             [{
                     transformOrigin: "top left",
-                    transform: `translateX(14px)
-            translateY(70px)`
+                    transform: `translateX(1vw)
+            translateY(1.5vw)`
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(20px) translateY(-35px)"
+                    transform: "translateX(0vw) translateY(-0.5vw)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(10px) translateY(-58px)"
+                    transform: "translateX(0.5vw) translateY(-1.5vw)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: "translateX(5px) translateY(-35px)"
+                    transform: "translateX(0.5vw) translateY(-0.5vw)"
 
                 },
                 {
                     transformOrigin: "top left",
-                    transform: `translateX(14px)
-            translateY(70px)`
+                    transform: `translateX(0.5vw)
+            translateY(0vw)`
                 }
             ], {
-                duration: 100000,
+                duration: 10000,
                 easing: "ease",
                 direction: "alternate",
                 iterations: Infinity,
