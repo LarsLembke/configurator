@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
             console.log(colorValue)
 
-            lavaTarget.style.fill = colorValue;
+            lavaTarget.parentElement.style.fill = colorValue;
 
         })
     });
