@@ -93,8 +93,24 @@ svg {
     position: relative;
 }
 
-#color_value {
+#color_picker {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 3vw;
+    padding: 2vw;
+}
+
+#color_picker h2 {
+    margin-top: 0.5vw;
+    font-family: 'Amatic SC';
+    font-size: 1.7rem;
+
+}
+
+#color_value {
     height: 4vw; 
     width: 5vw;
     border: 2px solid black;
