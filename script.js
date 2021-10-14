@@ -175,7 +175,7 @@ window.addEventListener("DOMContentLoaded", function() {
                     document.querySelector("#standard_top").classList.add("hide");
 
 
-                    document.querySelector("#bottom_path").innerHTML = squareTopPath;
+                    document.querySelector("#top_path").innerHTML = squareTopPath;
 
                 } else if (feature === "crown_top") {
 
@@ -195,7 +195,7 @@ window.addEventListener("DOMContentLoaded", function() {
                     document.querySelector("#standard_top").classList.add("hide");
 
 
-                    document.querySelector("#bottom_path").innerHTML = crownTopPath;
+                    document.querySelector("#top_path").innerHTML = crownTopPath;
 
                 } else {
 
@@ -214,7 +214,7 @@ window.addEventListener("DOMContentLoaded", function() {
                     document.querySelector("#crown_top").classList.add("hide");
                     document.querySelector(`#options [data-feature="crown_top"`).classList.remove("chosen");
 
-                    document.querySelector("#bottom_path").innerHTML = standardTopPath;
+                    document.querySelector("#top_path").innerHTML = standardTopPath;
 
                 }
             }
@@ -226,9 +226,7 @@ window.addEventListener("DOMContentLoaded", function() {
             document.querySelector(`[data-feature="${feature}"`).classList.remove("hide");
 
             theFeature.classList.add(feature);
-            theFeature.style.position = "absolute";
-            theFeature.style.display = "inline-block";
-            document.querySelector("ul").style.display = "block";
+            // theFeature.style.position = "absolute";
 
             const firstFrame = theFeature.getBoundingClientRect();
 
@@ -245,11 +243,13 @@ window.addEventListener("DOMContentLoaded", function() {
             theFeature.animate(
                 [{
                         transformOrigin: "top left",
+                        position: "absolute",
                         transform: `translateX(${deltaX}px)
                 translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`
                     },
                     {
                         transformOrigin: "top left",
+                        position: "absolute",
                         transform: "none"
                     }
                 ], {
@@ -258,12 +258,19 @@ window.addEventListener("DOMContentLoaded", function() {
                 }
             );
 
+            theFeature.addEventListener("animationend", function() {
+                console.log("animationend")
+            });
+
 
         } else {
 
             target.classList.remove("chosen");
             console.log(`Feature ${feature} is turned off!`);
             document.querySelector(`[data-feature="${feature}"`).classList.add("hide");
+
+
+            //FØØØØØT
 
 
             if (feature.includes("foot")) {
@@ -300,6 +307,45 @@ window.addEventListener("DOMContentLoaded", function() {
 
                 }
             }
+
+
+            //TØØØØP
+
+            if (feature.includes("top")) {
+                console.log("fooooot")
+                if (feature === "square_top") {
+
+                    features.crown_top = false;
+                    features.square_top = false;
+                    document.querySelector("#standard_top").classList.remove("hide");
+
+                    document.querySelector("#top_path").innerHTML = standardTopPath;
+
+                } else if (feature === "crown_top") {
+
+                    features.square_top = false;
+                    features.crown_top = false;
+                    document.querySelector("#standard_top").classList.remove("hide");
+
+                    document.querySelector("#top_path").innerHTML = standardTopPath;
+
+                } else {
+
+                    console.log("stand_FALSE");
+
+                    document.querySelector("#square_top").classList.add("hide")
+                    features.crown_top = false;
+                    features.square_top = false;
+                    features.standard_top_selected = false;
+
+                    document.querySelector("#crown_top").classList.add("hide")
+
+
+                    document.querySelector("#top_path").innerHTML = "";
+
+                }
+            }
+
 
             theFeature.classList.remove(feature);
 
