@@ -45,22 +45,6 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    function setColor(theColor) {
-
-        document.querySelector("#color_picker").addEventListener("input", function() {
-            theColor = document.querySelector("#color_value").value;
-
-            console.log(document.querySelector("#color_value").value)
-
-            return theColor;
-        });
-
-
-    }
-
-
-
-
     document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
 
     function toggleOption(event) {
@@ -80,7 +64,16 @@ window.addEventListener("DOMContentLoaded", function() {
 
         if (features[feature] === true) {
 
-            console.log("yes?")
+            console.log("yes?");
+
+            if (feature.includes("foot")) {
+                console.log("fooooot")
+                if (feature == "space_foot") {
+                    console.log("spacefoot");
+                    console.log(document.querySelector("#bottom_path path"))
+                    document.querySelector("#bottom_path path").d = spaceFootPath;
+                }
+            }
 
             target.classList.add("chosen");
 
