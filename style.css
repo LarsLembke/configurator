@@ -12,25 +12,70 @@
 }
 
 body {
-    background-color: rgb(252, 250, 247);
+    margin: 2vw;
+    background-color: rgba(19, 15, 58, 0.4);
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0vw 0vw 0vw 5vw;
+    font-family: 'Amatic SC';
+    position: relative;
+    color: black;
+    text-decoration: none;
+    display: inline-block; 
+    
+    
+}
+
+h1:hover {
+    color: black;
+    
+    
+}
+
+h1:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    transition: transform 0.5s ease;
+    background-color: black;
+    
+}
+
+h1:hover:before {
+    transform: scaleX(1);
+    
 }
 
 #configurator {
     display: grid;
     grid-template-areas: "product options" "features features";
-    gap: 2vw;
+    gap: 3vw;
     position: static;
+    
 }
 
 #product_preview {
     grid-area: product;
-    /* border: solid 1px black; */
     margin: 2vw;
-    box-shadow: 2px 2px 8px #aaa;
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
     border-radius: 2px;
     position: relative;
     transition: opacity ease-in .5s;
-    background-color: #fff;
+    background-color: rgb(234, 234, 247);
+    justify-self: center;
+    
+    
 }
 
 #product_preview img,
@@ -40,12 +85,7 @@ svg {
     height: 90vh;
     top: 0;
     left: 0;
-    /* align-self: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center; */
+    padding: 0vw 12vw 0vw 12vw;
 }
 
 #product_preview img.basic {
@@ -55,13 +95,13 @@ svg {
 #options {
     grid-area: options;
     margin: 2vw;
-    box-shadow: 2px 2px 8px #aaa;
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
     border-radius: 2px;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #fff;
+    background-color: rgb(234, 234, 247);
 }
 
 #options .option {
