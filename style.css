@@ -99,7 +99,7 @@ svg {
     border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 3vw;
+    margin: 3vw 3vw 1vw 3vw;
     padding: 2vw;
 }
 
@@ -111,11 +111,44 @@ svg {
 }
 
 #color_value {
+    cursor: pointer;
     height: 4vw; 
     width: 5vw;
     border: 2px solid black;
     border-radius: 0.2vw;
 
+}
+
+.option {
+    
+    padding: 2vw;
+}
+
+figcaption {
+    font-family: 'Amatic SC';
+    font-size: 1.7rem;
+    margin: 3vw;
+    color: black;
+
+}
+
+figcaption img {
+
+    padding: 2vw;
+}
+
+#item_list img {
+   
+    border: 2px solid black;
+    border-radius: 0.2vw;
+
+}
+
+#item_list {
+    border: 1px solid black;
+    margin: 3vw;
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
+    background-color: white;
 }
 
 #options {
@@ -139,8 +172,12 @@ svg {
 }
 
 #options .option:hover {
-    background-color: #ddd;
+    background-color: rgba(19, 15, 58, 0.4);
     cursor: pointer;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    
+    
 }
 
 #options .option.chosen {
@@ -151,10 +188,7 @@ svg {
 #options .option img {
     width: 7vw;
     height: auto;
-}
-
-#options .option figcaption {
-    font-size: 20px;
+    
 }
 
 #selected {
