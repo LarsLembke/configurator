@@ -1,4 +1,5 @@
 * {
+    padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
@@ -22,13 +23,17 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    margin: 3vw 0vw 0vw 5vw;
+    margin: 1vw 0vw 0vw 2vw;
     font-family: 'Amatic SC';
     position: relative;
     color: black;
     text-decoration: none;
     display: inline-block; 
     text-shadow: 1px 1px 3px rgb(91, 91, 91);
+    border: 1px solid black;
+    padding: 2vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
     
     
 }
@@ -62,7 +67,7 @@ h1:hover:before {
     display: grid;
     grid-template-areas: "product options" "features features";
     position: static;
-    margin: 5vw;
+    margin: 1vw 5vw 1vw 5vw;
     
 }
 
@@ -137,14 +142,11 @@ figcaption img {
     padding: 2vw;
 }
 
-#item_list img {
-   
-    border: 2px solid black;
-    border-radius: 0.2vw;
 
-}
 
 #item_list {
+    height: 60vh;
+    overflow-y: scroll;
     border: 1px solid black;
     margin: 3vw;
     box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
@@ -152,6 +154,7 @@ figcaption img {
 }
 
 #options {
+    height: 86.9vh;
     grid-area: options;
     margin: 2vw;
     box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
@@ -171,16 +174,13 @@ figcaption img {
     color: #aaa;
 }
 
-#options .option:hover:first-child {
 
-    border-top: none;
-}
 
 #options .option:hover {
     background-color: rgba(19, 15, 58, 0.4);
     cursor: pointer;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+   
+    
     
     
 }
@@ -193,6 +193,8 @@ figcaption img {
 #options .option img {
     width: 7vw;
     height: auto;
+    border: 1px solid black;
+    padding: 3vw;
     
 }
 
@@ -202,11 +204,16 @@ figcaption img {
 }
 
 #selected ul {
+   
     z-index: 10;
     list-style-type: none;
+   
+    
 }
 
 #selected ul li {
+
+    
     z-index: 10;
     display: inline-block;
 }
@@ -214,7 +221,11 @@ figcaption img {
 #selected ul li img {
     position: relative;
     z-index: 11;
-    width: 3em;
+    width: 5vw;
+    margin-bottom: 4vw;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px rgba(52, 52, 52, 0.653);
+    background-color: white;
 }
 
 #product_preview svg g:hover {}
