@@ -171,6 +171,11 @@ figcaption img {
     color: #aaa;
 }
 
+#options .option:hover:first-child {
+
+    border-top: none;
+}
+
 #options .option:hover {
     background-color: rgba(19, 15, 58, 0.4);
     cursor: pointer;
