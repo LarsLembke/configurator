@@ -4,7 +4,8 @@ const features = {
     spongebob: false,
     float_foot: false,
     space_foot: false,
-    standard_foot: true
+    standard_foot: true,
+    standard_foot_selected: false
 }
 
 const spaceFootPath = '<path class="cls-2" d="M57,564a378.7,378.7,0,0,0-16,37c-4.4,12.1-8.4,25-12,39a414.8,414.8,0,0,0-10,53,405.5,405.5,0,0,0-3,54h0c.7,15.7,1.3,31.3,2,47H28a218.4,218.4,0,0,1-2-28c-.1-16.4,1.3-30.7,4-43a179.5,179.5,0,0,1,48-87c1.7,6.3,3.3,12.7,5,19,5.4,20.7,10.7,41.3,16,62l67,1c5.7-27,11.3-54,17-81a372.1,372.1,0,0,1,33,67,373,373,0,0,1,16,56c1.7,11,3.3,22,5,33h9a631.1,631.1,0,0,0-1-66c-2.4-35.2-7.3-68-14-93a400,400,0,0,0-27-72,18.8,18.8,0,0,0,3-7c.9-4.8.7-9-2-11a7.3,7.3,0,0,0-6-1c-2.3.5-3.5,1.9-5,3s-5,2.2-9,3c-18.7,3.7-31.9,7.5-51,8-25.5.7-46.7-2.9-62-8-4.4-1.5-8.7-3.1-13-5a8.1,8.1,0,0,0-6,4c-.9,1.8-.6,3.7,0,6A59.6,59.6,0,0,0,57,564Z"/>';
@@ -73,17 +74,32 @@ window.addEventListener("DOMContentLoaded", function() {
                 console.log("fooooot")
                 if (feature === "space_foot") {
 
+                    if (features.float_foot === true) {
+                        document.querySelector(`#selected [data-feature="float_foot"`).remove();
+                    } else if (features.standard_foot_selected === true) {
+                        document.querySelector(`#selected [data-feature="standard_foot"`).remove();
+                    }
+
                     features.float_foot = false;
                     features.standard_foot = false;
+
+
 
                     document.querySelector(`#options [data-feature="float_foot"`).classList.remove("chosen");
                     document.querySelector("#float_foot").classList.add("hide");
                     document.querySelector(`#options [data-feature="standard_foot"`).classList.remove("chosen");
                     document.querySelector("#standard_foot").classList.add("hide");
 
+
                     document.querySelector("#bottom_path").innerHTML = spaceFootPath;
 
                 } else if (feature === "float_foot") {
+
+                    if (features.space_foot === true) {
+                        document.querySelector(`#selected [data-feature="space_foot"`).remove();
+                    } else if (features.standard_foot_selected === true) {
+                        document.querySelector(`#selected [data-feature="standard_foot"`).remove();
+                    }
 
 
                     features.standard_foot = false;
@@ -91,7 +107,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
                     document.querySelector(`#options [data-feature="standard_foot"`).classList.remove("chosen");
                     document.querySelector("#space_foot").classList.add("hide");
-                    document.querySelector(`#selected [data-feature="space_foot"`).remove();
                     document.querySelector(`#options [data-feature="space_foot"`).classList.remove("chosen");
                     document.querySelector("#standard_foot").classList.add("hide");
 
@@ -100,12 +115,18 @@ window.addEventListener("DOMContentLoaded", function() {
 
                 } else {
 
+                    if (features.float_foot === true) {
+                        document.querySelector(`#selected [data-feature="float_foot"`).remove();
+                    } else if (features.space_foot === true) {
+                        document.querySelector(`#selected [data-feature="space_foot"`).remove();
+                    }
+
                     features.space_foot = false;
                     features.float_foot = false;
+                    features.standard_foot_selected = true;
 
                     document.querySelector("#space_foot").classList.add("hide");
                     document.querySelector(`#options [data-feature="space_foot"`).classList.remove("chosen");
-                    document.querySelector(`#selected [data-feature="space_foot"`).remove();
                     document.querySelector("#float_foot").classList.add("hide");
                     document.querySelector(`#options [data-feature="float_foot"`).classList.remove("chosen");
 
@@ -121,6 +142,9 @@ window.addEventListener("DOMContentLoaded", function() {
             document.querySelector(`[data-feature="${feature}"`).classList.remove("hide");
 
             theFeature.classList.add(feature);
+            theFeature.style.position = "absolute";
+            theFeature.style.display = "inline-block";
+            document.querySelector("ul").style.display = "block";
 
             const firstFrame = theFeature.getBoundingClientRect();
 
@@ -138,15 +162,15 @@ window.addEventListener("DOMContentLoaded", function() {
                 [{
                         transformOrigin: "top left",
                         transform: `translateX(${deltaX}px)
-                translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`,
+                translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`
                     },
                     {
                         transformOrigin: "top left",
                         transform: "none"
                     }
                 ], {
-                    duration: 2000,
-                    easing: "ease-in-out",
+                    duration: 500,
+                    easing: "ease-in-out"
                 }
             );
 
@@ -162,6 +186,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 console.log("fooooot")
                 if (feature === "space_foot") {
 
+                    features.float_foot = false;
                     features.space_foot = false;
                     document.querySelector("#standard_foot").classList.remove("hide");
 
@@ -169,6 +194,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
                 } else if (feature === "float_foot") {
 
+                    features.space_foot = false;
                     features.float_foot = false;
                     document.querySelector("#standard_foot").classList.remove("hide");
 
@@ -176,10 +202,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
                 } else {
 
-                    features.space_foot = false;
+                    console.log("stand_FALSE");
 
                     document.querySelector("#space_foot").classList.add("hide")
                     features.float_foot = false;
+                    features.space_foot = false;
+                    features.standard_foot_selected = false;
 
                     document.querySelector("#float_foot").classList.add("hide")
 
