@@ -91,6 +91,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
                     document.querySelector(`#options [data-feature="standard_foot"`).classList.remove("chosen");
                     document.querySelector("#space_foot").classList.add("hide");
+                    document.querySelector(`#selected [data-feature="space_foot"`).remove();
                     document.querySelector(`#options [data-feature="space_foot"`).classList.remove("chosen");
                     document.querySelector("#standard_foot").classList.add("hide");
 
@@ -104,6 +105,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
                     document.querySelector("#space_foot").classList.add("hide");
                     document.querySelector(`#options [data-feature="space_foot"`).classList.remove("chosen");
+                    document.querySelector(`#selected [data-feature="space_foot"`).remove();
                     document.querySelector("#float_foot").classList.add("hide");
                     document.querySelector(`#options [data-feature="float_foot"`).classList.remove("chosen");
 
@@ -230,7 +232,7 @@ window.addEventListener("DOMContentLoaded", function() {
         li.dataset.feature = feature;
 
         const img = document.createElement("img");
-        img.src = `images/${feature}.png`;
+        img.src = `images/${feature}_option.png`;
         img.alt = capitalize(feature);
 
         li.append(img);
